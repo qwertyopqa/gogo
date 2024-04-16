@@ -1,0 +1,12 @@
+uuid: 42c568d3-eeb3-4c7f-a663-077ff0d63ff2
+langcode: en
+status: true
+dependencies: {  }
+label: 1col-xs
+id: 1col_xs
+description: ''
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 360
+hard_limit_height: 240

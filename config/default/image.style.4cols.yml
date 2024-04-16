@@ -1,0 +1,19 @@
+uuid: aa911d3c-f455-4f8d-acaa-5f473736db51
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: 4cols
+label: 4cols
+effects:
+  10627d2b-cb37-4bdb-9c1a-76af80e4d1a3:
+    uuid: 10627d2b-cb37-4bdb-9c1a-76af80e4d1a3
+    id: image_effects_scale_and_smart_crop
+    weight: 1
+    data:
+      width: '300'
+      height: '200'
+      upscale: false
+      simulate: false
+      algorithm: entropy_grid

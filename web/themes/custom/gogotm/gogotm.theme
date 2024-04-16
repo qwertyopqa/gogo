@@ -1,0 +1,94 @@
+<?php
+
+use Drupal\responsive_background_image\ResponsiveBackgroundImage;
+
+/**
+ * @file
+ * The GoGo theme code.
+ */
+
+/**
+ * implements theme_page_attachments().
+ */
+function gogotm_page_attachments(&$variables) {
+  $variables['#attached']['library'][] = 'gogotm/global-styling';
+}
+
+/**
+ * implements theme_preprocess_html().
+ */
+function gogotm_preprocess_html(&$variables) {
+  $classes =
+    isset($variables['html_attributes'])
+    && isset($variables['html_attributes']['class'])
+    ? $variables['html_attributes']['class']
+    : [];
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $classes[] = 'node';
+    $classes[] = 'node-' . $node->bundle();
+  }
+  $classes[] = \Drupal::currentUser()->isAnonymous() ? 'anonymous' : 'logged-in';
+  $variables['html_attributes']['class'] = $classes;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function gogotm_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+  $el = $variables['elements'];
+  $term = $el['#taxonomy_term'];
+  $suggestions[] = 'taxonomy_term__' . $el['#view_mode'];
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $el['#view_mode'];
+}
+
+
+function gogotm_preprocess_node(&$vars) {
+  $style_tag = false;
+  if ($vars['view_mode'] === 'full') {
+    $node = $vars['node'];
+    $bundle = $node->bundle();
+    if ($bundle === 'article' || $bundle === 'listing_page') {
+      $mediaEntity = $vars['node']->field_banner_image->entity;
+      if ($mediaEntity) {
+        if ($mediaEntity->field_media_image->getValue()[0]['target_id']) {
+          $css_selector = '.node-' . $bundle . ' .main-banner';
+          $style_tag = ResponsiveBackgroundImage::generateMediaQueries($css_selector, $mediaEntity, 'field_media_image', 'banner');
+
+        }
+      }
+      $vars['#attached']['library'][] = 'gogotm/article';
+    }
+    if ($style_tag) {
+      $vars['#attached']['html_head'][] = $style_tag;
+    }
+  }
+  if (false) {
+    /*
+    // Hero Paragraph.
+    case 'hero':
+      // Make sure the image field is not empty.
+      if (!empty($paragraph->get('field_hero_background_image')
+        ->getValue()[0]['target_id'])) {
+
+        // Construct a CSS selector string that points to the element on which a background image will be added.
+        // In this example, it is assumed that within my Paragraph template there is a div with the class 'hero__image'. Note that we do not have to render the background image in the template itself.
+        $css_selector = '.' . $css_class . ' .hero__image';
+
+        // Here we call the method to generate media queries.
+        // We pass in the CSS selector string as described above.
+        // We pass in the entity object.
+        // We pass in the machine name of the image/media image field.
+        // We pass in the machine name of the Responsive Image Style.
+        // In this example, I have a Responsive Image Style called 'hero_paragraph'.
+        $style_tag = ResponsiveBackgroundImage::generateMediaQueries($css_selector, $paragraph, 'field_hero_background_image', 'hero_paragraph');
+
+        // We then check if the media queries were properly generated and attach them to the HTML head.
+        if ($style_tag) {
+          $vars['#attached']['html_head'][] = $style_tag;
+        }
+      }
+
+      break;
+      */
+   }
+}

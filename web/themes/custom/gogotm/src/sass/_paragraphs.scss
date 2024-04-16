@@ -1,0 +1,203 @@
+.paragraph--type--articles-news {
+  padding: 50px 0;
+  .latest-wrapper {
+    margin-bottom: 100px;
+
+    .more-link {
+      a {
+        position: absolute;
+        background: #ff0;
+        padding: 3px 8px;
+        border-radius: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        bottom: -38px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        font-weight: 900;
+        font-size: 10px;
+        transition-property: bottom, padding, background, border-radius;
+        transition-duration: 0.2s;
+        &:after {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: -5px;
+          right: -5px;
+          bottom: -5px;
+          border: 1px solid #ff0;
+          border-radius: 7px;
+        }
+        &:hover {
+          background: #f0f;
+          padding: 9px 14px;
+          bottom: -44px;
+          border-radius: 6px;
+          &:after {
+            border-color: #909;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+          }
+        }
+      }
+    }
+    label {
+      font-size: 48px;
+      font-weight: 600;
+      position: absolute;
+      top: -18px;
+      font-family: $font-titles;
+      text-shadow: 0px 5px 2px rgba(0,0,0,0.5);
+      letter-spacing: -0.05em;
+    }
+    article {
+      cursor: pointer;
+      margin-top: 20px;
+
+      transition: transform 0.2s;
+      p {
+        color: #000;
+        background: #fff;
+        padding: 10px 10px;
+        border-radius: 0 0 5px 5px;
+        margin: 0;
+        transition-property: transform, box-shadow;
+        transition-duration: 0.2s;
+        box-shadow: 0px 0px 0px #0ff;
+        transform: translate(0px, 0px);
+      }
+      h2 {
+        margin-bottom: 0px;
+        background: #ff0;
+        transition-property: transform, box-shadow;
+        transition-duration: 0.2s;
+        box-shadow: 0px 0px 0px #0ff;
+        transform: translate(0px, 0px);
+        a {
+          font-size: 18px;
+          font-weight: 400;
+          color: #000;
+          text-decoration: none;
+          display: inline-block;
+        }
+      }
+      &:hover {
+        transform: scale(1.05);
+        p {
+          box-shadow: -10px 10px 0px #0ff;
+          transform: translate(10px, -10px);
+        }
+        h2 {
+          box-shadow: -10px 10px 0px #0ff;
+          transform: translate(10px, -10px);
+        }
+      }
+    }
+
+    &[role="left"] {
+      label {
+        left:15px;
+      }
+      h2 {
+        margin-left: -40px;
+        border-radius: 5px 5px 0;
+        a {
+          margin: 8px 15px 8px 60px;
+        }
+      }
+      article {
+        &:hover {
+          p {
+            box-shadow: 10px 10px 0px #0ff;
+            transform: translate(-10px, -10px);
+          }
+          h2 {
+            box-shadow: 10px 10px 0px #0ff;
+            transform: translate(-10px, -10px);
+          }
+        }
+      }
+    }
+    &[role="right"] {
+      label {
+        right:15px;
+      }
+      h2 {
+        margin-right: -40px;
+        border-radius: 5px 5px 5px 0;
+        a {
+          margin: 8px 60px 8px 15px;
+        }
+      }
+      article {
+        &:hover {
+          p {
+            box-shadow: -10px 10px 0px #0ff;
+            transform: translate(10px, -10px);
+          }
+          h2 {
+            box-shadow: -10px 10px 0px #0ff;
+            transform: translate(10px, -10px);
+          }
+        }
+      }
+    }
+
+  }
+  .field--name-field-article-news-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+#views-exposed-form-articles-listing {
+  position: relative;
+  margin: -20px 80px 60px 100px;
+  @include XS {
+    margin: -20px 20px 40px 25px;
+  }
+  legend {
+    position: absolute;
+    left: -30px;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    background: #ff0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 5px 0 0 5px;
+    @include XS {
+      left: -20px;
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 200;
+      color:#000;
+      rotate: -90deg;
+      @include XS {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+      }
+    }
+
+  }
+
+  .bef-checkboxes {
+    @extend .glass;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.9rem 0 0.4rem;
+    border-radius: 0;
+    padding: .5rem;
+
+
+  }
+}

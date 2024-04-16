@@ -1,0 +1,31 @@
+uuid: 98d702ad-5a60-4eed-8a09-a40540979491
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_2
+    - field.field.node.listing_page.field_banner_image
+    - node.type.listing_page
+  module:
+    - user
+id: node.listing_page.teaser_2
+targetEntityType: node
+bundle: listing_page
+mode: teaser_2
+content:
+  field_banner_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

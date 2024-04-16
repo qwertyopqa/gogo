@@ -1,0 +1,22 @@
+uuid: 04b6452f-1f95-46a1-9bce-00a67e219a44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.listing_page.field_banner_image
+    - node.type.listing_page
+  module:
+    - user
+id: node.listing_page.default
+targetEntityType: node
+bundle: listing_page
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_banner_image: true
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: 551add7c-24f8-4a1a-a8ec-a3e321343220
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.listing_page.field_banner_image
+    - node.type.listing_page
+  module:
+    - user
+id: node.listing_page.teaser
+targetEntityType: node
+bundle: listing_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  langcode: true

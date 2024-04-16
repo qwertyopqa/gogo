@@ -1,0 +1,49 @@
+html.anonymous {
+  .content-admin-bar {
+    display: none;
+  }
+}
+.content-admin-bar {
+  $tip: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom:0;
+  width: $tip;
+  display: flex;
+  align-items: center;
+  z-index:90;
+  .contextual {
+    display:none;
+  }
+  .contextual-region {
+
+    > ul {
+      list-style: none;
+      width: auto;
+      display: inline-flex;
+      max-height: 24px;
+      transform: translatex(0%);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.5s;
+      &:hover {
+        transform: translatex(calc(-100% + $tip))
+      }
+      a {
+        display: inline-block;
+        color: #000;
+        background-color: #0ff;
+        text-decoration: none;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding:5px 10px;
+        width: 100%;
+        &:hover {
+          background-color: #f0f;
+        }
+      }
+    }
+  }
+
+}

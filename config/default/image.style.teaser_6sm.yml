@@ -1,0 +1,18 @@
+uuid: 17d69aca-4866-4e8a-863a-e1ba73ea55ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.2col_sm
+  module:
+    - automated_crop
+name: teaser_6sm
+label: teaser-6sm
+effects:
+  5682cfe7-246a-4bee-b773-15ea2e44f58d:
+    uuid: 5682cfe7-246a-4bee-b773-15ea2e44f58d
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: 2col_sm
+      automatic_crop_provider: null

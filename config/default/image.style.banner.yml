@@ -1,0 +1,19 @@
+uuid: 06210353-a440-4f72-aefc-11a852498a50
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: banner
+label: banner
+effects:
+  5984e5af-89db-4999-9881-bc3ee8bf9429:
+    uuid: 5984e5af-89db-4999-9881-bc3ee8bf9429
+    id: image_effects_scale_and_smart_crop
+    weight: 1
+    data:
+      width: '850'
+      height: '500'
+      upscale: false
+      simulate: false
+      algorithm: entropy_slice

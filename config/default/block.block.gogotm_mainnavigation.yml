@@ -1,0 +1,25 @@
+uuid: 80e97c55-5c57-4d01-a857-343446aceba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - gogotm
+id: gogotm_mainnavigation
+theme: gogotm
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

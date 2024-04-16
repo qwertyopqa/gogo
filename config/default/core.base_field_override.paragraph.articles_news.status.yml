@@ -1,0 +1,22 @@
+uuid: 887d9027-01e9-44a1-a455-3d47601705e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.articles_news
+id: paragraph.articles_news.status
+field_name: status
+entity_type: paragraph
+bundle: articles_news
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

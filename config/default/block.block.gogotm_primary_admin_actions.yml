@@ -1,0 +1,20 @@
+uuid: d600a66a-d61c-46d7-80f6-db59f09927a5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gogotm
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: gogotm_primary_admin_actions
+theme: gogotm
+region: admin_bar
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

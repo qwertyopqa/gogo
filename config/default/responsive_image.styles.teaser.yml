@@ -1,0 +1,24 @@
+uuid: e6a89ab8-6c81-42f0-b430-8a9b7a003420
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.teaser_12xs
+    - image.style.teaser_6sm
+  theme:
+    - gogotm
+id: teaser
+label: Teaser
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_6sm
+    breakpoint_id: gogotm.wide
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_6sm
+    breakpoint_id: gogotm.tablet
+    multiplier: 1x
+breakpoint_group: gogotm
+fallback_image_style: teaser_12xs

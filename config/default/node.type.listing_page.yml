@@ -1,0 +1,17 @@
+uuid: f21ae039-77f6-4f56-bcbe-258e0f81fefe
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Listing Page'
+type: listing_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

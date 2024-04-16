@@ -1,0 +1,195 @@
+@use 'sass:color';
+
+#block-gogotm-site-branding{
+  width: 10em;
+  margin: 0px 0 -8px;
+  opacity: 0.7;
+  @include XS {
+    width: 7em;
+  }
+}
+html.node-hp {
+  header {
+    margin-top: calc(50vh - 30px);
+    margin-bottom: calc(50vh - 30px);
+    @mixin bannerThing {
+      position: absolute;
+      overflow: hidden;
+      height: calc(50vh - 70vh * var(--banner-fact));
+      left: 0;
+      right: 0;
+      z-index: -100;
+      font-size: 50vh;
+      line-height: 65%;
+      letter-spacing: -.12em;
+      font-weight: 100;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      span {
+        display: inline-block;
+        transform: translateY(calc(var(--banner-p-fact) * var(--banner-fact)));
+      }
+    }
+    .banner__top {
+      @include bannerThing;
+      --banner-p-fact: 200%;
+      align-items: end;
+      bottom: 70px;
+    }
+    .banner__bot {
+      @include bannerThing;
+      --banner-p-fact: -200%;
+      align-items: start;
+      top: 70px;
+    }
+  }
+}
+header {
+  top:0;
+  position: sticky;
+  z-index: 100;
+  background-color: color.adjust($main-color, $alpha:-0.1);
+  .header-wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--row-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#block-gogotm-main-menu {
+  > ul {
+    position: relative;
+    z-index: 0;
+    height: 70px;
+    align-items: center;
+    a {
+
+      position: relative;
+      margin: 0 20px;
+      color: #000;
+      font-weight: 100;
+      font-size: 18px;
+      text-decoration: none;
+      font-family: $font-titles;
+      &:before {
+        cursor: pointer;
+        content: '';
+        background-color: rgba(70, 70, 10, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        position: absolute;
+        top:0;
+        left: -7px;
+        right: -9px;
+        bottom: 0;
+        z-index: -1;
+        transform: skewX(-25deg) scaleY(0);
+        transition: transform 0.2s;
+      }
+      &.is-active {
+        color: #fff;
+        &:before {
+          transform: skewX(-25deg) scaleY(3.7);
+          border-top: 0.01em solid #0ff;
+          border-bottom: 0.01em solid #0ff;
+        }
+
+      }
+      &:hover {
+        color:#fff;
+        &:before {
+          transform: skewX(-25deg) scaleY(3.7);
+          border-top: 0.01em solid #0ff;
+          border-bottom: 0.01em solid #0ff;
+        }
+      }
+    }
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.language-switcher-language-url {
+  width: 110px;
+  overflow: hidden;
+  margin:0;
+  text-align: right;
+  @include XS {
+    position: absolute;
+    right: calc(10px - 0.2px * var(--scroll-y));
+    bottom: -40px;
+  }
+  .links {
+    display: inline-flex;
+    flex-flow: column;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding:0 5px;
+    @include XS {
+      flex-flow: row;
+    }
+  }
+  li {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin: 3px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transform: translate(0px, 0px);
+    transition-property: background-color box-shadow transform;
+    &.is-active, &:hover {
+      background-color: #0ff;
+      box-shadow: -3px 3px 0px rgba(0, 0, 0, 1);
+      transform: translate(3px, -3px);
+    }
+    @include XS {
+      margin: 5px;
+      background-color: rgba(#fff, 0.5);
+    }
+  }
+  a {
+    text-decoration: none;
+    font-size: 0;
+    padding: 0px 3px 3px ;
+    line-height: 100%;
+    &:after {
+      display: inline-block;
+      position: relative;
+      content: attr(hreflang);
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 400;
+      color: #000;
+    }
+  }
+}
+
+.main-banner {
+  position: relative;
+  height: 300px;
+  // max-width: $width-max;
+  margin: 0 auto;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  h1 {
+    font-family: $font-titles;
+    font-size: 80px;
+    font-weight: 100;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.04em;
+    line-height: 75%;
+    text-align: center;
+    max-width: var(--row-width);
+  }
+}

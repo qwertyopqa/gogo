@@ -1,0 +1,20 @@
+uuid: 7d18f010-7383-4ecf-ba63-cfa82ad508c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - gogo
+  theme:
+    - gogotm
+id: gogotm_headerbanner
+theme: gogotm
+region: before_content
+weight: 0
+provider: null
+plugin: header_banner_block
+settings:
+  id: header_banner_block
+  label: 'Header Banner'
+  label_display: '0'
+  provider: gogo
+visibility: {  }

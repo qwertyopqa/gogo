@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ddev start
+ddev composer install
+ddev drush si -y --account-pass=admin
+ddev drush entity:delete shortcut
+ddev drush cset system.site uuid ee858e7b-80c3-4bb4-bf88-8334f1ebf260 -y
+ddev drush cim -y
+ddev drush cr
+ddev drush cim -y
+ddev drush cr
+ddev drush content:import ../config/cbe/content-bulk-export-data.zip
+ddev drush ggic
+ddev drush gent --bundles=tags --max-depth=1 --kill 15
+ddev drush genc --bundles=article --translations=nl --kill 50
+ddev drush genc --bundles=news --translations=nl --kill 5
+ddev drush menu_migration:import main
+ddev drush pmu devel devel_generate menu_migration single_content_sync
+ddev build-fe
+ddev drush cr
+ddev launch

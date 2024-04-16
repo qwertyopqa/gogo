@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd web/themes/custom/gogotm/src;
+bun install;
+bun run build;

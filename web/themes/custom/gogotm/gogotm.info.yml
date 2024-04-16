@@ -1,0 +1,14 @@
+name: GoGo
+type: theme
+description: 'The theme forn the Gogo website.'
+core_version_requirement: '>=9.2'
+libraries:
+  - gogotm/global-styling
+base theme: stable9
+regions:
+  header: 'Header'
+  admin_bar: 'Admin Bar'
+  before_content: 'Before Content'
+  content: 'Content'
+  footer: 'Footer'
+logo: assets/gogo-logo.svg

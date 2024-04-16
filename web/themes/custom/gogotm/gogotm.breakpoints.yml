@@ -1,0 +1,18 @@
+gogotm.mobile:
+  label: Mobile
+  mediaQuery: 'screen and (max-width: 640px)'
+  weight: 0
+  multipliers:
+    - 1x
+gogotm.tablet:
+  label: Tablet
+  mediaQuery: 'screen and (max-width: 980)'
+  weight: 0
+  multipliers:
+    - 1x
+gogotm.wide:
+  label: wide
+  mediaQuery: 'screen and (min-width: 981)'
+  weight: 1
+  multipliers:
+    - 1x

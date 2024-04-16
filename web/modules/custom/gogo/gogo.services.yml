@@ -1,0 +1,5 @@
+services:
+  gogo.commands:
+    class: \Drupal\gogo\Drush\Commands\GoGoDrushCommands
+    tags:
+      - { name: drush.command }

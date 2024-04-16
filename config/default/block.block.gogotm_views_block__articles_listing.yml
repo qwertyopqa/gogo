@@ -1,0 +1,29 @@
+uuid: 177e287a-f40c-46ae-b71a-f4925d753967
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - system
+    - views
+  theme:
+    - gogotm
+id: gogotm_views_block__articles_listing
+theme: gogotm
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:articles-listing'
+settings:
+  id: 'views_block:articles-listing'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /articles

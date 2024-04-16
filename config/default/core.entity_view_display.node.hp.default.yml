@@ -1,0 +1,31 @@
+uuid: d34ad976-d5e1-4b83-9279-8054d4d6e6a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hp.field_paragraphs
+    - node.type.hp
+  module:
+    - entity_reference_revisions
+    - user
+id: node.hp.default
+targetEntityType: node
+bundle: hp
+mode: default
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

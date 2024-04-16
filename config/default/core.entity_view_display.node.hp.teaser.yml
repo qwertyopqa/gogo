@@ -1,0 +1,23 @@
+uuid: 81223ac0-c779-4f53-ace7-f5ea08a75ba0
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hp.field_paragraphs
+    - node.type.hp
+  module:
+    - user
+id: node.hp.teaser
+targetEntityType: node
+bundle: hp
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_paragraphs: true
+  langcode: true

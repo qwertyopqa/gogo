@@ -1,0 +1,31 @@
+uuid: 5d452def-b09f-432e-a906-1c325b6cea7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.hp
+    - paragraphs.paragraphs_type.articles_news
+  module:
+    - entity_reference_revisions
+id: node.hp.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: hp
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      articles_news: articles_news
+    negate: 0
+    target_bundles_drag_drop:
+      articles_news:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

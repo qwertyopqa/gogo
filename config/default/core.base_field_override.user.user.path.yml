@@ -1,0 +1,19 @@
+uuid: 1e4b5734-c256-4930-aa4e-b9ed9fad068f
+langcode: en
+status: true
+dependencies:
+  module:
+    - path
+    - user
+id: user.user.path
+field_name: path
+entity_type: user
+bundle: user
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

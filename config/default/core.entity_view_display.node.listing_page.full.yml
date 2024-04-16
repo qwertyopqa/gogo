@@ -1,0 +1,23 @@
+uuid: 55a6d921-4a3a-42d8-a8f4-aa0850cc721d
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.listing_page.field_banner_image
+    - node.type.listing_page
+  module:
+    - user
+id: node.listing_page.full
+targetEntityType: node
+bundle: listing_page
+mode: full
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  langcode: true

@@ -1,0 +1,15 @@
+uuid: d169855c-6177-4ead-8a3f-162be371fb79
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags.teaser
+targetEntityType: taxonomy_term
+bundle: tags
+mode: teaser
+content: {  }
+hidden:
+  description: true
+  langcode: true

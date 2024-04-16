@@ -1,0 +1,13 @@
+uuid: 7fbda4d4-dbae-4ade-9674-30d01717ea95
+langcode: en
+status: true
+dependencies: {  }
+id: doc_image
+label: 'Doc Image'
+description: ''
+source: image
+queue_thumbnail_downloads: true
+new_revision: false
+source_configuration:
+  source_field: field_media_image_1
+field_map: {  }

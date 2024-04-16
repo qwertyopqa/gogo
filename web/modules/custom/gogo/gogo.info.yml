@@ -1,0 +1,5 @@
+name: GoGo Base Module
+description: Various micro implementations
+core_version_requirement: ^9.2 || ^10
+type: module
+package: GoGo

@@ -1,0 +1,18 @@
+uuid: bbc9876d-7f74-4af4-bfc4-4bde9763e7b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.office
+id: node.office.title
+field_name: title
+entity_type: node
+bundle: office
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

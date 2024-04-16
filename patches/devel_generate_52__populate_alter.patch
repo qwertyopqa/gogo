@@ -1,0 +1,12 @@
+diff --git a/devel_generate/src/DevelGenerateBase.php b/devel_generate/src/DevelGenerateBase.php
+index 3473b80..9206feb 100644
+--- a/devel_generate/src/DevelGenerateBase.php
++++ b/devel_generate/src/DevelGenerateBase.php
+@@ -194,6 +194,7 @@ abstract class DevelGenerateBase extends PluginBase implements DevelGenerateBase
+       }
+       $entity->$field_name->generateSampleItems($max);
+     }
++    \Drupal::moduleHandler()->invokeAll('devel_generate_populate_fields_alter', [&$entity]);
+   }
+ 
+   /**

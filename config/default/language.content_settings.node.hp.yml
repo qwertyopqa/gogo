@@ -1,0 +1,18 @@
+uuid: 33d4a648-e28f-421a-81a8-5925269b5ca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hp
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.hp
+target_entity_type_id: node
+target_bundle: hp
+default_langcode: site_default
+language_alterable: false

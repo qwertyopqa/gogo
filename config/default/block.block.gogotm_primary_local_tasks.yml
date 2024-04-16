@@ -1,0 +1,22 @@
+uuid: d0282462-f0ff-4961-acd5-21972f1318a1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gogotm
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: gogotm_primary_local_tasks
+theme: gogotm
+region: admin_bar
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

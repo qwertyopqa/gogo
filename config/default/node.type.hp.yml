@@ -1,0 +1,17 @@
+uuid: f3256afd-bc9f-4584-8c8d-95f06b3d01fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: HP
+type: hp
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,7 @@
+{% if image %}
+  <div class="main-banner" style='background-image:url({{ image }});'>
+{% else %}
+  <div class="main-banner no-image">
+{% endif %}
+  <h1>{{ title }}</h1>
+</div>

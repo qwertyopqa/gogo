@@ -1,0 +1,33 @@
+uuid: fcf4f3ff-a467-441f-b73f-ad5fa95d1556
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - node
+    - views
+  theme:
+    - gogotm
+id: gogotm_views_block__articles_related
+theme: gogotm
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:articles-related'
+settings:
+  id: 'views_block:articles-related'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

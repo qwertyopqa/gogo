@@ -1,0 +1,21 @@
+uuid: 1b21d43c-758c-4c9a-bcbf-db9a58d6c655
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swap_position
+    - paragraphs.paragraphs_type.text_image
+id: paragraph.text_image.field_swap_position
+field_name: field_swap_position
+entity_type: paragraph
+bundle: text_image
+label: 'Swap Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Image : Left'
+  off_label: 'Image : Right'
+field_type: boolean

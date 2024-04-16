@@ -1,0 +1,21 @@
+uuid: 2db1b1ef-6874-492c-899d-fdbf41a6b983
+langcode: en
+status: true
+dependencies:
+  module:
+    - gogo
+  theme:
+    - gogotm
+id: gogotm_footercopyright
+theme: gogotm
+region: footer
+weight: 0
+provider: null
+plugin: gogo_footer_copyright
+settings:
+  id: gogo_footer_copyright
+  label: 'Footer Copyright'
+  label_display: '0'
+  provider: gogo
+  copyright: 'Copyright GoGo™ | [year]'
+visibility: {  }

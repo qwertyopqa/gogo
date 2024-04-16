@@ -1,0 +1,11 @@
+uuid: 9f6d045b-d2cf-462b-aa66-709bcc8a3441
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.2col_sm
+id: crop.2col_sm
+target_entity_type_id: crop
+target_bundle: 2col_sm
+default_langcode: site_default
+language_alterable: false

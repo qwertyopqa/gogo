@@ -1,0 +1,45 @@
+uuid: 2c1660c9-a718-460c-a9c1-b69dfe1519ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor5
+_core:
+  default_config_hash: rrcLa1jOgI7xezeJia25MS2tmm_3e6VZOQaCIPF9b-I
+format: basic_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - underline
+      - '|'
+      - subscript
+      - superscript
+      - horizontalLine
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - blockQuote
+      - '|'
+      - removeFormat
+  plugins:
+    ckeditor5_list:
+      properties:
+        reversed: false
+        startIndex: true
+      multiBlock: true
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0

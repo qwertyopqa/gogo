@@ -1,0 +1,22 @@
+uuid: 2f33e533-b8d6-4d13-8153-de4f451ba6da
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.office
+id: node.office.sticky
+field_name: sticky
+entity_type: node
+bundle: office
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

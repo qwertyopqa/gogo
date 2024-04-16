@@ -1,0 +1,18 @@
+uuid: 1dfc8c94-ad04-4da4-81e1-21f89fc3e714
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.1col_xs
+  module:
+    - automated_crop
+name: teaser_12xs
+label: teaser-12xs
+effects:
+  2efc74c6-f2f1-4934-92e4-ca939fcc2c26:
+    uuid: 2efc74c6-f2f1-4934-92e4-ca939fcc2c26
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: 1col_xs
+      automatic_crop_provider: null

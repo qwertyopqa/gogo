@@ -1,0 +1,22 @@
+uuid: 4225578e-a16c-41cc-8ded-0cb3bdaa7ebc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gogotm
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: gogotm_content
+theme: gogotm
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

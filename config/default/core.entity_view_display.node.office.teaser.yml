@@ -1,0 +1,33 @@
+uuid: cb5bebfe-7f36-4c85-af4e-ae0ae7ecf26b
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.office.field_address
+    - field.field.node.office.field_contact_person
+    - field.field.node.office.field_country
+    - field.field.node.office.field_email
+    - field.field.node.office.field_fax
+    - field.field.node.office.field_tel
+    - node.type.office
+  module:
+    - user
+id: node.office.teaser
+targetEntityType: node
+bundle: office
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_contact_person: true
+  field_country: true
+  field_email: true
+  field_fax: true
+  field_tel: true
+  langcode: true

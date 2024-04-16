@@ -1,0 +1,12 @@
+uuid: 2e68164c-5fd9-4bcd-b4dd-815f2f8d937e
+langcode: en
+status: true
+dependencies: {  }
+label: 2col-sm
+id: 2col_sm
+description: ''
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 320
+hard_limit_height: 200

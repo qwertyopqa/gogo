@@ -1,0 +1,76 @@
+uuid: ba4d9cdd-b46c-46c6-8933-23e06632bdd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.office.field_address
+    - field.field.node.office.field_contact_person
+    - field.field.node.office.field_country
+    - field.field.node.office.field_email
+    - field.field.node.office.field_fax
+    - field.field.node.office.field_tel
+    - node.type.office
+  module:
+    - name
+    - user
+id: node.office.default
+targetEntityType: node
+bundle: office
+mode: default
+content:
+  field_address:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_contact_person:
+    type: name_default
+    label: above
+    settings:
+      format: default
+      markup: none
+      list_format: ''
+      link_target: ''
+      preferred_field_reference: ''
+      preferred_field_reference_separator: ', '
+      alternative_field_reference: ''
+      alternative_field_reference_separator: ', '
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_country:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_email:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_fax:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_tel:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+hidden:
+  langcode: true
+  links: true

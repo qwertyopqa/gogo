@@ -1,0 +1,18 @@
+uuid: c1e4f83d-e5d1-4232-8e6d-027f5e8bf0f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.office
+id: node.office.changed
+field_name: changed
+entity_type: node
+bundle: office
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

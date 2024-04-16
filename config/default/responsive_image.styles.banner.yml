@@ -1,0 +1,24 @@
+uuid: 3dee0544-7c18-47d2-a34c-575e4bde0781
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.max_650x650
+    - image.style.wide
+  theme:
+    - gogotm
+id: banner
+label: Banner
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: wide
+    breakpoint_id: gogotm.wide
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide
+    breakpoint_id: gogotm.tablet
+    multiplier: 1x
+breakpoint_group: gogotm
+fallback_image_style: max_650x650

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Prata&display=swap');
+$color-back:#444433;
+$main-color: #FF0;
+$sec-color: #00F;
+$font-titles: 'Outfit', sans-serif;
+$font-text: 'Inter', sans-serif;
+
+$grid-columns: 12; // Set number of columns in the grid
+
+
+$xs-max: 640px; // Set sm breakpoint's max width
+$sm-max: 980px; // Set md breakpoint's max width
+$md-max: 2000px; // Set lg breakpoint's max width
+$lg-max: 3000px; // Set xl breakpoint's max width
+$lg-max: 4000px; // Set xl breakpoint's max width
+
+$xs-row: 380px; // Set the row width for the xs breakpoint
+$sm-row: 640px; // Set the row width for the xs breakpoint
+$md-row: 980px; // Set the row width for the xs breakpoint
+
+$gutter: 10px; // Set gutter size
+
+@mixin onLarge {
+  @media only screen and (min-width: ($sm-max + 1px)){
+    @content
+  }
+}

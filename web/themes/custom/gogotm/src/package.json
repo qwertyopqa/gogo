@@ -1,0 +1,19 @@
+{
+  "name": "gogo_theme",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "sass sass/main.scss ../css/main.css --style compressed",
+    "watch": "sass --watch sass/main.scss ../css/main.css"
+  },
+  "devDependencies": {
+    "@drewbot/sass-flexbox-grid": "^2.0.7",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.74.1"
+  }
+}

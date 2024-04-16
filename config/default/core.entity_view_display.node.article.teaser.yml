@@ -1,0 +1,43 @@
+uuid: e41d29de-07fc-452c-a6fc-071c7de852a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.field_banner_image
+    - field.field.node.article.field_country
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_text
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: V47dEG0Mf8XVUaxi_YEyZGs5PMww1CUJWmih46SpnMM
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  field_banner_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_teaser_text:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_country: true
+  field_paragraphs: true
+  field_tags: true
+  langcode: true
+  links: true
